@@ -134,7 +134,13 @@ main:
     }
 
     try {
-      text = engine(file.text);
+      const extraOpts = {};
+
+      if (filename.startsWith('inline_latex')) {
+        extraOpts.inlinelatex = true;
+      }
+
+      text = engine(file.text, extraOpts);
       html = file.html ? file.html : '';
 
       if (!filename.endsWith('__whitespace.text')) {

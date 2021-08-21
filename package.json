@@ -34,8 +34,5 @@
   "scripts": {
     "test": "node test",
     "bench": "node test --bench"
-  },
-  "dependencies": {
-    "katex": "^0.13.13"
   }
 }
